@@ -12,18 +12,28 @@ class Contact(models.Model):
         return f"{self.name} - {self.subject}"
 
 class Project(models.Model):
+    # Yahan hum naye icons add kar rahe hain
     ICON_CHOICES = [
+        # --- Programming Icons ---
         ('fa-brands fa-python text-yellow-400', 'Python (Yellow)'),
         ('fa-brands fa-js text-yellow-300', 'JavaScript (Yellow)'),
         ('fa-brands fa-react text-blue-400', 'React (Blue)'),
         ('fa-solid fa-database text-indigo-400', 'Database/SQL (Indigo)'),
         ('fa-solid fa-server text-green-500', 'Django/Backend (Green)'),
         ('fa-solid fa-robot text-pink-500', 'AI/ML (Pink)'),
-        ('fa-solid fa-cart-shopping text-orange-400', 'E-Commerce (Orange)'),
         ('fa-solid fa-layer-group text-purple-400', 'Full Stack (Purple)'),
+        ('fa-solid fa-cart-shopping text-orange-400', 'E-Commerce (Orange)'),
+
+        # --- NAYE ICONS (Jo aapne mange) ---
+        ('fa-solid fa-blog text-teal-400', 'Blogging/Content (Teal)'),         # Blog Icon
+        ('fa-solid fa-graduation-cap text-blue-500', 'School/LMS (Blue)'),     # School Icon
+        ('fa-solid fa-utensils text-red-500', 'Food/Restaurant (Red)'),       # Food Icon
+        ('fa-solid fa-hospital text-green-600', 'Health/Medical (Green)'),     # Extra: Hospital
+        ('fa-solid fa-plane text-sky-500', 'Travel/Tourism (Sky)'),            # Extra: Travel
     ]
 
     title = models.CharField(max_length=200)
+    # ... baki code same rahega ...
     
     # 2. Galti Yahan Thi: 'models.RichTextField()' nahi, sirf 'RichTextField()' hoga
     description = RichTextField() 
