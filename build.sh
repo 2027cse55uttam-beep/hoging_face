@@ -10,3 +10,10 @@ python manage.py collectstatic --no-input
 
 # 3. Database Migrate karo
 python manage.py migrate
+
+
+
+# ... upar purani commands (pip install, collectstatic, migrate) ...
+
+# Database update hone ke baad superuser script chalao
+python create_superuser.py
