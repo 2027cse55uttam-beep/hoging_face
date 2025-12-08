@@ -23,6 +23,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -155,3 +156,29 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 CSRF_TRUSTED_ORIGINS = ['https://hoging-face.onrender.com']
 
 X_FRAME_OPTIONS = 'DENY'
+
+# JAZZMIN SETTINGS (Dashboard Design)
+JAZZMIN_SETTINGS = {
+    "site_title": "RoyFolio Admin",
+    "site_header": "RoyFolio Dashboard",
+    "site_brand": "RoyFolio",
+    "welcome_sign": "Welcome back, Admin!",
+    "copyright": "RoyFolio Ltd",
+    "search_model": "core.Project", # Top search bar projects search karega
+    
+    # Side Menu Icons (FontAwesome)
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "core.Project": "fas fa-laptop-code",  # Project ke liye Laptop icon
+        "core.Contact": "fas fa-envelope-open-text", # Contact ke liye Email icon
+    },
+    
+    "show_ui_builder": False,
+    "changeform_format": "horizontal_tabs", # Forms tabs mein dikhenge
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "flatly",   # Clean Modern Look
+    "dark_mode_theme": "darkly", # Dark mode support
+}
