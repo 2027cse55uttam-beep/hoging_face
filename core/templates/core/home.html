@@ -1,0 +1,165 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<section id="home" class="relative pt-20 pb-32 flex flex-col items-center justify-center min-h-screen overflow-hidden">
+    
+    <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300/30 dark:bg-purple-600/30 rounded-full blur-[100px] -z-10 animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-indigo-300/30 dark:bg-indigo-600/20 rounded-full blur-[120px] -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        
+        <div class="text-center md:text-left space-y-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-200 dark:border-indigo-500/30 bg-indigo-50 dark:bg-indigo-500/10 backdrop-blur-md">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span class="text-xs font-medium text-indigo-600 dark:text-indigo-300 tracking-wide uppercase">Open to Work</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-display font-bold leading-tight text-gray-900 dark:text-white">
+                Turning <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 animate-gradient">Ideas</span> <br>
+                Into Reality.
+            </h1>
+
+            <p class="text-gray-600 dark:text-gray-400 text-lg md:text-xl max-w-lg mx-auto md:mx-0 leading-relaxed">
+                I build production-grade applications with <strong class="text-indigo-600 dark:text-white">Django</strong> and <strong class="text-indigo-600 dark:text-white">Modern UI</strong>. Scalable backends, beautiful frontends.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#projects" class="px-8 py-4 rounded-full bg-gray-900 dark:bg-white text-white dark:text-black font-bold text-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition transform hover:-translate-y-1 shadow-xl shadow-gray-400/20 dark:shadow-white/10">
+                    View Work
+                </a>
+                <a href="{% url 'contact' %}" class="px-8 py-4 rounded-full border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white font-bold text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition transform hover:-translate-y-1">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+
+        <div class="relative hidden md:block group perspective-1000">
+            <div class="relative bg-[#0F1117] border border-gray-800 rounded-xl p-6 shadow-2xl backdrop-blur-xl transform transition-transform duration-500 group-hover:rotate-y-6 group-hover:rotate-x-6">
+                <div class="flex items-center gap-2 mb-4 border-b border-gray-800 pb-4">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-xs text-gray-500 font-mono">developer_profile.py</span>
+                </div>
+                <div class="font-mono text-sm space-y-2">
+                    <div class="flex">
+                        <span class="text-pink-500 mr-2">class</span>
+                        <span class="text-yellow-300">Developer</span>:
+                    </div>
+                    <div class="pl-4">
+                        <span class="text-purple-400">def</span> <span class="text-blue-400">__init__</span>(self):
+                    </div>
+                    <div class="pl-8 text-gray-300">
+                        self.name = <span class="text-green-400">"Your Name"</span>
+                    </div>
+                    <div class="pl-8 text-gray-300">
+                        self.stack = [<span class="text-green-400">'Django'</span>, <span class="text-green-400">'Tailwind'</span>]
+                    </div>
+                    <div class="pl-8 text-gray-300">
+                        self.passion = <span class="text-green-400">"Building Cool Stuff"</span>
+                    </div>
+                    <div class="pl-4 mt-2">
+                        <span class="text-purple-400">def</span> <span class="text-blue-400">hire_me</span>(self):
+                    </div>
+                    <div class="pl-8">
+                        <span class="text-pink-500">return</span> <span class="text-green-400">True</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full blur-2xl opacity-40"></div>
+        </div>
+    </div>
+</section>
+
+<section class="py-10 border-y border-gray-200 dark:border-gray-900 bg-white/50 dark:bg-black/50 backdrop-blur-sm transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6">
+        <p class="text-center text-gray-500 dark:text-gray-500 text-sm font-mono mb-8 uppercase tracking-widest">Technologies I work with</p>
+        
+        <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+            <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <i class="fa-brands fa-python text-4xl text-yellow-400 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <span class="text-3xl font-bold text-gray-800 dark:text-green-500 group-hover:text-green-600 transition">dj</span>
+            </div>
+            <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <i class="fa-brands fa-js text-4xl text-yellow-500 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <i class="fa-brands fa-html5 text-4xl text-orange-500 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <i class="fa-brands fa-css3-alt text-4xl text-blue-500 group-hover:scale-110 transition"></i>
+            </div>
+            <div class="flex flex-col items-center gap-2 group cursor-pointer">
+                <i class="fa-solid fa-database text-4xl text-indigo-500 dark:text-indigo-400 group-hover:scale-110 transition"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="mb-16">
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">Selected <span class="text-indigo-600 dark:text-indigo-500">Works</span></h2>
+        <div class="h-1 w-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        {% for project in projects %}
+        <div class="group relative bg-white dark:bg-[#0F1117] rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 flex flex-col h-full">
+            
+            <div class="h-48 bg-gray-50 dark:bg-gray-900 overflow-hidden relative border-b border-gray-100 dark:border-gray-800">
+                <div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black group-hover:scale-110 transition-transform duration-700 flex items-center justify-center">
+                     <i class="{{ project.icon }} text-6xl group-hover:scale-125 transition-transform duration-500 filter drop-shadow-lg"></i>
+                </div>
+            </div>
+            
+            <div class="p-6 flex flex-col flex-grow">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition">{{ project.title }}</h3>
+                    
+                    {% if project.link %}
+                    <a href="{{ project.link }}" target="_blank" class="text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-lg"></i>
+                    </a>
+                    {% endif %}
+                </div>
+                
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3 flex-grow">
+                    {{ project.description }}
+                </p>
+                
+                <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-xs text-gray-500 font-mono uppercase tracking-wider">Live Project</span>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+            <p class="text-gray-500">No projects added yet. Go to Admin Panel.</p>
+        {% endfor %}
+        </div>
+</section>
+
+<section id="contact" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto bg-gradient-to-br from-indigo-600 to-purple-700 dark:from-indigo-900/50 dark:to-purple-900/50 border border-transparent dark:border-indigo-500/30 rounded-3xl p-8 md:p-16 text-center backdrop-blur-md relative overflow-hidden shadow-2xl">
+        
+        <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/30 dark:bg-indigo-500/20 rounded-full blur-[80px]"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/30 dark:bg-purple-500/20 rounded-full blur-[80px]"></div>
+
+        <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 relative z-10">Have a project in mind?</h2>
+        <p class="text-indigo-100 dark:text-gray-300 mb-10 text-lg relative z-10">Let's collaborate and build something extraordinary together.</p>
+        
+        <a href="mailto:your@email.com" class="relative z-10 inline-block px-10 py-4 bg-white text-indigo-900 font-bold rounded-full hover:scale-105 transition duration-300 shadow-[0_0_20px_rgba(255,255,255,0.4)]">
+            Say Hello 👋
+        </a>
+    </div>
+</section>
+
+{% endblock %}
