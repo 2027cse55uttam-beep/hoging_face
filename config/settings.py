@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -129,3 +130,28 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # WhiteNoise Storage (Compression ke liye)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+# PRODUCTION SECURITY SETTINGS
+
+# 1. HSTS: Browser ko bolo ki agle 1 saal tak sirf HTTPS use kare
+SECURE_HSTS_SECONDS = 31536000  # 1 Year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# 2. SSL Redirect: Agar koi http:// khole toh auto https:// kar do
+SECURE_SSL_REDIRECT = True
+
+# 3. Cookies Secure: Cookies tabhi bhejo jab connection secure ho
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+# 4. XSS Protection: Browser ko bolo script attacks block kare
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# 5. Render Specific (CSRF Fix) - IMPORTANT
+# Render ka URL yahan dalna zaroori hai warna Forms submit nahi honge
+CSRF_TRUSTED_ORIGINS = ['https://hoging-face.onrender.com']
+
+X_FRAME_OPTIONS = 'DENY'
