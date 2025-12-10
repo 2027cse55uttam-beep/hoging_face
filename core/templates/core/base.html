@@ -270,6 +270,7 @@
 
     <footer
         class="relative mt-32 bg-gray-100 dark:bg-[#080808] border-t border-gray-200 dark:border-gray-900 overflow-hidden">
+
         <div
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none opacity-[0.03] select-none">
             <h1 class="text-[15vw] font-display font-bold uppercase text-gray-900 dark:text-white leading-none">Create
@@ -286,7 +287,8 @@
                 </div>
 
                 <div class="flex gap-6">
-                    <a href="#"
+
+                    <a href="https://github.com/2027cse55uttam-beep" target="_blank"
                         class="group relative w-12 h-12 bg-gray-200 dark:bg-gray-900 rounded-full flex items-center justify-center overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
                         <div
                             class="absolute inset-0 w-full h-full bg-gray-800 dark:bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
@@ -295,7 +297,7 @@
                             class="fa-brands fa-github text-xl text-gray-700 dark:text-gray-400 group-hover:text-white dark:group-hover:text-black relative z-10 transition-colors"></i>
                     </a>
 
-                    <a href="#"
+                    <a href="https://www.linkedin.com/in/uttam-roy6454a/" target="_blank"
                         class="group relative w-12 h-12 bg-gray-200 dark:bg-gray-900 rounded-full flex items-center justify-center overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]">
                         <div
                             class="absolute inset-0 w-full h-full bg-[#0077b5] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
@@ -304,14 +306,6 @@
                             class="fa-brands fa-linkedin-in text-xl text-gray-700 dark:text-gray-400 group-hover:text-white relative z-10 transition-colors"></i>
                     </a>
 
-                    <a href="#"
-                        class="group relative w-12 h-12 bg-gray-200 dark:bg-gray-900 rounded-full flex items-center justify-center overflow-hidden transition-all hover:shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-                        <div
-                            class="absolute inset-0 w-full h-full bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
-                        </div>
-                        <i
-                            class="fa-brands fa-x-twitter text-xl text-gray-700 dark:text-gray-400 group-hover:text-white relative z-10 transition-colors"></i>
-                    </a>
                 </div>
             </div>
 
@@ -319,8 +313,8 @@
                 class="mt-16 pt-8 border-t border-gray-300 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                 <p>&copy; 2024 RoyFolio. All rights reserved.</p>
                 <div class="flex gap-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-indigo-500 transition">Privacy</a>
-                    <a href="#" class="hover:text-indigo-500 transition">Terms</a>
+                    <a href="{% url 'privacy' %}" class="hover:text-indigo-500 transition">Privacy</a>
+                    <a href="{% url 'terms' %}" class="hover:text-indigo-500 transition">Terms</a>
                 </div>
             </div>
         </div>

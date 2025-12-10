@@ -57,3 +57,12 @@ def custom_404(request, exception):
 
 def custom_500(request):
     return render(request, 'core/500.html', status=500)
+
+
+
+
+def privacy_policy(request):
+    return render(request, 'core/privacy.html')
+
+def terms_of_service(request):
+    return render(request, 'core/terms.html')
