@@ -46,3 +46,14 @@ def projects_page(request):
     # Saare projects yahan load honge
     projects = Project.objects.all().order_by('-created_at')
     return render(request, 'core/projects.html', {'projects': projects})
+
+
+
+
+# ... purane imports ...
+
+def custom_404(request, exception):
+    return render(request, 'core/404.html', status=404)
+
+def custom_500(request):
+    return render(request, 'core/500.html', status=500)
